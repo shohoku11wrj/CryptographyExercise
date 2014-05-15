@@ -21,7 +21,13 @@ Download dcrypt from [libdcrypt-0.6.tar.gz](http://www.cs.stevens.edu/~nicolosi/
 
 Cipher-Block Chaining (CBC). To encrypt in CBC mode, one thinks of the stream of bytes as a sequence of block, each of the size of the block cipher being used (AES in your case); then, one XORs each plaintext block with the encryption of the previous block before encrypting, as shown here: 
 
-![AES CBC-mode](CBC.gif)
+                    m1      m2      m3
+                    |       |       |
+       iv -- aes -- +   --- +   --- +
+                    |   |   |   |   |
+                   aes  |  aes  |  aes
+                    |----   |----   |
+                    c1      c2      c3
 
 If the plaintext blocks are m1, m2, ..., and the ciphertext blocks c1, c2, ..., then encryption and decryption in CBC mode are performed as follows:
 <blockquote>
