@@ -1,0 +1,89 @@
+Script started on Wed Apr  9 16:32:37 2014
+$ ./pv_keyt  ygen my_key.b64
+$ yes ""^[[Dte        "test" | head -1000 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1015 > a_file           01 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1002>  > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1003 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ^[[B^[[A        ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1004 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ ^[[B^[[A        diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1005 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1006 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1007 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1008 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1009 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -100 10 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1010 > a_file          1 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ ^[[B^[[A]\          diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1012 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1013 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ^[[C    ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ ^[[A\     diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1014 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ diff a_file a_decrypted_file
+$ 
+$ yes "test" | head -1015 > a_file
+$ ./pv_encrypt my_key.b64 a_file an_encrypted_file
+$ ./pv_decrypt my_key.b64 an_encrypted_file a_decrypted_file
+$ ^[[A    diff a_file a_decrypted_file
+$ 
+$ wc a_file
+1015 1015 5075 a_file
+$ wc a_decrypted_file
+1015 1015 5075 a_decrypted_file
+$ 
+
+Script done on Wed Apr  9 16:42:42 2014
